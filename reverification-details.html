@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Customer Lifecycle & Reverification Engine - Product Case Study | Talal Absar</title>
+  <meta content="AI-native KYC reverification PRD and clickable UI prototype for a UAE digital bank - risk-based reverification, automated identity verification, sanctions screening, and a compliance review queue." name="description">
+  <meta content="Product Manager, PRD, KYC, reverification, fintech, digital banking, UAE, CBUAE, AML, compliance" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .swiper-button-prev::after {
+      font-size: 30px;
+      position: relative;
+      left: -1px;
+    }
+
+    .swiper-button-next::after {
+      font-size: 30px;
+      position: relative;
+      left: 3px;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next,
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+      background: gray;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    .portfolio-details-slider .swiper-slide img {
+      border: 1px solid #e6eef9;
+      border-radius: 6px;
+    }
+
+    .slide-caption {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Case study hero + action buttons */
+    .cs-tag {
+      display: inline-block;
+      background: #149ddd;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .cs-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0 8px;
+    }
+
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 11px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: .3s;
+      border: 2px solid #149ddd;
+    }
+
+    .cs-btn-primary {
+      background: #149ddd;
+      color: #fff;
+    }
+
+    .cs-btn-primary:hover {
+      background: #128acb;
+      color: #fff;
+    }
+
+    .cs-btn-outline {
+      background: #fff;
+      color: #149ddd;
+    }
+
+    .cs-btn-outline:hover {
+      background: #149ddd;
+      color: #fff;
+    }
+
+    .cs-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid #eef2f7;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .cs-meta strong {
+      color: #050d18;
+    }
+
+    .cs-pills span {
+      display: inline-block;
+      background: #f0f5fb;
+      color: #1f3b57;
+      font-size: 13px;
+      padding: 6px 13px;
+      border-radius: 20px;
+      margin: 4px 6px 4px 0;
+    }
+
+    .cs-card {
+      background: #f7faff;
+      border: 1px solid #e6eef9;
+      border-radius: 8px;
+      padding: 18px 20px;
+      height: 100%;
+    }
+
+    .cs-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #149ddd;
+      margin-bottom: 8px;
+    }
+
+    .cs-card p {
+      font-size: 14px;
+      color: #444;
+      margin: 0;
+    }
+
+    .cs-metric {
+      text-align: center;
+      background: #fff;
+      border: 1px solid #e6eef9;
+      border-radius: 8px;
+      padding: 22px 12px;
+      height: 100%;
+    }
+
+    .cs-metric .num {
+      font-size: 30px;
+      font-weight: 700;
+      color: #149ddd;
+      line-height: 1.1;
+    }
+
+    .cs-metric .lbl {
+      font-size: 13px;
+      color: #555;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/Talal.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Talal Absar</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/TalalAbsar10" class="google-plus"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/talal-absar-a6334abb" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
+          </li>
+          <li><a href="index.html#skills" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Skills</span></a>
+          </li>
+          <li><a href="index.html#experience" class="nav-link scrollto"><i class="bx bx-briefcase"></i>
+              <span>Experience</span></a></li>
+          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+              <span>Portfolio</span></a></li>
+          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i>
+              <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Product Case Study</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Reverification Engine</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <!-- ===== Title + Actions ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <span class="cs-tag">Product Case Study</span>
+              <h2 style="font-weight:700;">Customer Lifecycle &amp; Reverification Engine</h2>
+              <div class="portfolio-description">
+                An AI-native KYC reverification platform for a UAE digital bank. It intelligently identifies
+                <em>when</em> and <em>what</em> needs to be reviewed, resolves the majority of cases automatically
+                through trusted UAE data sources (ICA, UAE PASS, AECB), and reserves human compliance effort for the
+                cases where it genuinely matters - covering risk-based reverification, automated identity verification,
+                sanctions &amp; PEP screening, and a compliance review queue with a full, immutable audit trail.
+              </div>
+
+              <div class="cs-actions">
+                <a class="cs-btn cs-btn-primary" href="https://precise-portal-builder.lovable.app" target="_blank"
+                  rel="noopener"><i class="bi bi-box-arrow-up-right"></i> View Live Prototype</a>
+                <a class="cs-btn cs-btn-outline" href="assets/docs/PRD_Talal_Absar.pdf" target="_blank" rel="noopener"><i
+                    class="bi bi-file-earmark-text"></i> Read the PRD (PDF)</a>
+                <a class="cs-btn cs-btn-outline" href="assets/docs/UI_Prototype_Talal_Absar.pdf" target="_blank"
+                  rel="noopener"><i class="bi bi-images"></i> UI Prototype Walkthrough (PDF)</a>
+              </div>
+
+              <div class="cs-meta">
+                <div><strong>Role:</strong> Product Manager (end-to-end)</div>
+                <div><strong>Domain:</strong> Digital Banking &amp; Fintech - UAE</div>
+                <div><strong>Deliverables:</strong> PRD, clickable prototype, architecture, roadmap</div>
+                <div><strong>Regulatory frame:</strong> CBUAE / FATF / AML &amp; KYC</div>
+              </div>
+              <p style="font-size:13px;color:#888;margin-top:14px;">Note: developed as an independent product exercise
+                to demonstrate end-to-end product thinking for a regulated UAE digital-banking use case. Company name and
+                identifying details have been anonymized.</p>
+            </div>
+          </div>
+
+          <!-- ===== Screens slider ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/1-operations-dashboard.png" alt="Operations Dashboard">
+                  <p class="slide-caption">1 - Operations Dashboard: queue health, SLA compliance, auto-resolution rate
+                    and risk distribution at a glance.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/2-queue-monitoring.png" alt="Queue Monitoring">
+                  <p class="slide-caption">2 - Queue Monitoring: live in-flight cases, SLA aging bands and per-reviewer
+                    workload (including the Auto-Resolver bot).</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/3-risk-triggers.png" alt="Risk Triggers">
+                  <p class="slide-caption">3 - Risk Triggers: the rule library that decides when a customer is pulled
+                    into review, with per-trigger auto-resolution performance.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/4-customers.png" alt="Customer Directory">
+                  <p class="slide-caption">4 - Customers: unified, colour-coded directory with risk tier, last review
+                    date and AUM, searchable by name or Emirates ID.</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/5-audit-reports.png" alt="Audit & Reports">
+                  <p class="slide-caption">5 - Audit &amp; Reports: immutable activity log with continuous chain-integrity
+                    verification and regulator-ready exports (CBUAE goAML, FATF Travel Rule).</p>
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/clre/6-customer-portal.png" alt="Customer Portal">
+                  <p class="slide-caption">6 - Customer Portal: the bilingual (EN/AR) customer-facing journey, shown only
+                    when automation cannot resolve a case silently.</p>
+                </div>
+
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <!-- ===== Problem ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>The Problem</h2>
+              <div class="portfolio-description">
+                Reverification in UAE digital banking consistently breaks down in the same ways:
+                <br><br>
+                • <b>One process for everyone</b> - a retired saver goes through the same review as a self-employed
+                consultant receiving high-value international transfers, even though their risk profiles are entirely
+                different.<br>
+                • <b>Manual work systems should own</b> - compliance teams chase documents, sort and prioritise cases,
+                and decide reviews that Emirates ID, AECB and UAE PASS could resolve automatically.<br>
+                • <b>Customers disrupted for no good reason</b> - uniform document requests create friction for the
+                low-risk majority, eroding trust and increasing support load.<br>
+                • <b>Audit trails as a liability</b> - decisions captured in spreadsheets and email threads are hard to
+                defend as the bank scales.<br>
+                • <b>Risk events caught too late</b> - employment changes, unusual transactions and adverse-media hits
+                surface through support tickets instead of triggering immediate action.
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Goals ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>Goals</h2>
+              <div class="portfolio-description">
+                • <b>Automate the majority of reverification</b> with no customer or operations touch - using Emirates
+                ID/ICA, UAE PASS and AECB to silently close low-risk periodic reviews and document refreshes. Target:
+                70%+ closed without human intervention.<br>
+                • <b>Make review frequency proportionate to risk</b> - high-risk every 6 months, standard every 12,
+                low-risk every 24 - replacing a non-compliant single annual cycle.<br>
+                • <b>Cover the full lifecycle</b> - periodic reviews, event-driven re-KYC, document refresh, profile
+                changes, source-of-funds re-collection, risk re-rating, lifecycle comms and escalation.<br>
+                • <b>Prepare every escalated case for the human</b> - a structured evidence pack, AI-generated summary
+                and recommended action so reviewers decide rather than assemble.<br>
+                • <b>Audit-ready by design</b> - every automated resolution, customer submission and reviewer action
+                written to an immutable, timestamped audit trail.
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Key Capabilities ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>Key Capabilities</h2>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Dynamic Risk Profiles</h4>
+              <p>Per-customer rating, review frequency and open triggers, recalculated by a configurable rules engine
+                the compliance team can tune without an engineering change.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Trigger Detection &amp; Consolidation</h4>
+              <p>Scheduled, document-expiry, event-driven and customer-initiated triggers - deduplicated into a single
+                case so the customer is contacted once, not many times.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Automated Resolution</h4>
+              <p>ICA + UAE PASS + AECB cross-checks silently close low-risk cases when signals agree and a configurable
+                confidence threshold is met; conflicts escalate.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Customer-Facing Journey</h4>
+              <p>Bilingual (Arabic-first) flow triggered only when action is genuinely required, asking only for what the
+                specific trigger needs - no generic KYC pack.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Compliance Review Queue</h4>
+              <p>Prioritised queue with SLA countdowns, AI case summaries, four-eyes control on high-risk decisions, and
+                a logged rationale for every outcome.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="cs-card">
+              <h4>Screening &amp; Audit</h4>
+              <p>Continuous sanctions/PEP/adverse-media screening that freezes matches within minutes, plus an immutable
+                audit log with regulator-ready CBUAE &amp; FATF exports.</p>
+            </div>
+          </div>
+
+          <!-- ===== Approach / Architecture ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>Approach &amp; Architecture</h2>
+              <div class="portfolio-description">
+                A layered, modular design where data flows from ingestion through to the customer or reviewer, routed
+                down one of three paths: <b>auto-resolved</b>, <b>customer action required</b>, or <b>compliance review
+                required</b>. AI sits in the augmentation layer to summarise and recommend - <b>it never makes the
+                compliance decision; rules and humans govern decisions</b>. Vendor selection was scoped for the UAE
+                regulatory context (ICA Direct API, UAE PASS via Digital Dubai, AECB + Refinitiv World-Check, Appian
+                case management, Azure Immutable Blob Storage for tamper-evident audit logging).
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Roadmap ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>Execution Roadmap</h2>
+              <div class="portfolio-description">
+                A nine-month, two-phase plan delivered with a cross-functional team (engineering, product, design,
+                compliance &amp; legal):
+                <br><br>
+                • <b>Phase 1 - Foundation &amp; Working Compliance Operation (Months 1-3):</b> risk profile engine,
+                trigger engine, auto-resolution via ICA/UAE PASS/AECB, customer journey v1, review queue with four-eyes
+                control, immutable audit log and a 1,000-customer controlled pilot - gated by a CBUAE regulatory review
+                checkpoint.<br>
+                • <b>Phase 2 - Scale, Enrich &amp; Strengthen Controls (Months 3-6+):</b> continuous real-time
+                screening, event-driven triggers, full source-of-funds re-collection, dormancy management, an Enhanced
+                Due Diligence workflow and enhanced (WhatsApp/Braze) communications.
+                <br><br>
+                <em>Delivery principle:</em> regulatory validation before scale - Phase 2 does not begin until the
+                automated-decisioning approach passes the CBUAE checkpoint.
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Success Metrics ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>Success Metrics (Phase 2 targets)</h2>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="cs-metric">
+              <div class="num">70%+</div>
+              <div class="lbl">Cases auto-resolved with no human or customer touch</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="cs-metric">
+              <div class="num">&lt;24h</div>
+              <div class="lbl">Time to resolve auto-resolved cases</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="cs-metric">
+              <div class="num">95%+</div>
+              <div class="lbl">North-star: due reviews closed on time, fully audited, at the right risk tier</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="cs-metric">
+              <div class="num">100%</div>
+              <div class="lbl">Audit-trail completeness - zero gaps</div>
+            </div>
+          </div>
+
+          <!-- ===== My Role ===== -->
+          <div class="col-lg-12">
+            <div class="portfolio-info">
+              <h2>My Role</h2>
+              <div class="portfolio-description">
+                • Owned the product end-to-end: strategy, problem framing, personas, scope (MoSCoW) and non-goals.<br>
+                • Authored the full PRD - functional requirements, end-to-end user journey, vendor/capability analysis,
+                a skeleton epic/story backlog, risk register and success metrics.<br>
+                • Designed and built the clickable UI prototype across six core surfaces (operations, queue, triggers,
+                customers, audit, customer portal).<br>
+                • Defined the regulatory operating model with CBUAE/FATF, AML/KYC obligations and Shariah-compliant
+                customer communications front of mind.
+              </div>
+              <div class="cs-actions">
+                <a class="cs-btn cs-btn-primary" href="https://precise-portal-builder.lovable.app" target="_blank"
+                  rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Explore the Live Prototype</a>
+                <a class="cs-btn cs-btn-outline" href="assets/docs/PRD_Talal_Absar.pdf" target="_blank" rel="noopener"><i
+                    class="bi bi-file-earmark-text"></i> Read the Full PRD</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Talal Absar 2026</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
